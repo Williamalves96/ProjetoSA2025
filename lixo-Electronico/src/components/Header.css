@@ -1,0 +1,23 @@
+.container-header{
+    height:30%;
+    width: 100%;
+    /*background-color: rgb(190, 201, 180);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: ;
+}
+
+ .logo-titulo{ 
+    display: flex;
+    height: 100%;
+    width: 50%;
+    /*background-color: aqua;*/
+}
+    
+    img{
+        height: 100px;
+    }
+
+   
+
+    

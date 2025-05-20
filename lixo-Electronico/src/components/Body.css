@@ -1,0 +1,30 @@
+.container-body{
+    height: 70%;
+    width: 100%;
+      background-color: rgb(94, 131, 96);   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+
+
+
+input{
+    height: 40px;
+    width: 250px;
+}
+
+button{
+     height: 40px;
+    width: 250px;
+}
+
+        
+label{
+display: block;
+    
+}
+
+
