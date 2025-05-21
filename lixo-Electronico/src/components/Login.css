@@ -1,4 +1,13 @@
 .container-login{
-    height: 100%;
-    background-color: black;
+  height:400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+   
+}
+
+.espaco-login{
+
 }

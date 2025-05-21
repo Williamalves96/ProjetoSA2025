@@ -28,40 +28,42 @@ function Body() {
 
   return (
     <div className="container-body">
-      <h1>CADASTRAR-SE</h1>
-      <div>
-        <label htmlFor="Nome Completo">Nome</label>
-        <input
-          type="text"
-          placeholder="Nome Completo"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="Senha">Senha</label>
-        <input
-          type="text"
-          placeholder="Senha"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-        />
-      </div>
+      <div className="container-telaCadastro">
+        <h1>CADASTRAR-SE</h1>
+        <div>
+          <label htmlFor="Nome Completo">Nome</label>
+          <input
+            type="text"
+            placeholder="Nome Completo"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="Senha">Senha</label>
+          <input
+            type="text"
+            placeholder="Senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+        </div>
 
-      <button onClick={cadastrar} disabled={email == "" || senha.length < 6}>
-        CADASTRAR
-      </button>
-      <p>JA TEM CONTA?</p>
-      <button onClick={() => navigate("login")}>FAZER LOGIN</button>
+        <button onClick={cadastrar} disabled={email == "" || senha.length < 6}>
+          CADASTRAR
+        </button>
+        <p>JA TEM CONTA?</p>
+        <button onClick={() => navigate("login")}>FAZER LOGIN</button>
+      </div>
     </div>
   );
 }

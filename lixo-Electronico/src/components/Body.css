@@ -1,19 +1,28 @@
 .container-body{
-    height: 70%;
+    min-height: calc(100vh - 100px);
     width: 100%;
-      background-color: rgb(94, 131, 96);   
-    display: flex;
+     /* background-color: rgb(94, 131, 96); */  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.container-telaCadastro{
+    height: 400px;
+    width: 400px;
+    background-color: rgb(14, 167, 83);
+     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     border: 1px solid black;
+    border-radius: 10px;
 }
-
 
 
 input{
     height: 40px;
     width: 250px;
+    outline: none;
 }
 
 button{

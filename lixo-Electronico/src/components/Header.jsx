@@ -7,13 +7,14 @@ function Header() {
         <h1>
           EcoDescart
         </h1>
+        </div>
         <div className="espaco-link">
           <p>Home</p>
           <p>Contato</p>
         </div>
       </div>
       
-      </div>
+      
     
   );
 }
