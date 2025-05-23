@@ -1,18 +1,18 @@
 import "./Login.css";
 function Login() {
   return (
-    <div className="container-login">
-      <div className="espaco-login">
+    <div className="login">
+      <div className="container-login">
         <h1>login</h1>
         <div>
-          <label htmlFor="email">email</label>
+          <label htmlFor="email">Email</label>
           <input type="text" placeholder="Email" />
         </div>
         <div>
-          <label htmlFor="senha" placeholder="password">
-            senha
+          <label htmlFor="senha" >
+            Senha
           </label>
-          <input type="password" />
+          <input type="password" placeholder="password" />
         </div>
         <div>
           <button>Login</button>

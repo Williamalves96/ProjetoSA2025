@@ -1,0 +1,103 @@
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /*background-color: rgb(55, 149, 177);*/
+}
+
+.container{
+    height: 100%;
+
+    /*background-color: rgb(255, 0, 170);*/
+}
+
+.cabecalho{
+   
+    height: 20%;
+
+    display: flex;
+}
+
+#text1{
+    height: 100%;
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text2{
+    height: 100%;
+    width: 70%;
+
+}
+
+.corpo{
+   display: flex;
+    height: 60%;
+   
+}
+
+#corpo1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#corpo2{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#tre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+   
+}
+#imagem{
+    height: 100%;
+}
+#log{
+    height: 100%;
+}
+
+button{
+    height: 30%;
+    width: 20%;
+    margin: 2%;
+    border: solid 0px transparent;
+    background-color: green;
+    color: #ffff;
+    font-weight: bold;
+
+}
+#lixo{
+    font-size: 120px;
+    color: green;
+    margin-bottom: -30px;
+}
+#eletronico{
+    font-size: 60px;
+    color: green;
+    margin-bottom: 15px;
+}
+#descart{
+    font-size: 25px;
+    color: black;
+}
+
+#titulo{
+    font-size: 40px;
+    color: green;
+
+}

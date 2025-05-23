@@ -1,13 +1,20 @@
 .container-login{
-  height:400px;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: aquamarine;
+   height: 320px;
+   width: 320px;
+    background-color: rgb(14, 167, 83);
+ display: flex;
+ flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
    
 }
 
-.espaco-login{
+.login{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
 }

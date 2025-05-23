@@ -1,18 +1,19 @@
 .container-body{
     min-height: calc(100vh - 100px);
     width: 100%;
-     /* background-color: rgb(94, 131, 96); */  
+      background-color: rgb(149, 172, 150);  
+     /* background-image: url(logo.web.png);  */
    display: flex;
    justify-content: center;
    align-items: center;
 }
 .container-telaCadastro{
-    height: 400px;
+    height: 500px;
     width: 400px;
     background-color: rgb(14, 167, 83);
      display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid black;
     border-radius: 10px;
@@ -33,7 +34,9 @@ button{
         
 label{
 display: block;
-    
+    font-size: 20px;
 }
 
-
+::placeholder{ 
+    padding: 18px;
+}
