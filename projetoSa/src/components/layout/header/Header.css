@@ -1,0 +1,46 @@
+.containerHeader{
+    height: 70px;
+    display: flex;
+
+    justify-content: space-between;
+    
+    background-color:rgb(87, 218, 60);
+}
+.logo{
+    height: 100%;
+    border: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    padding-bottom: 12px;
+}
+
+.espacoLink{
+    height: 100%;
+    /* width: 100%; */
+    /* background-color: rgb(196, 182, 182); */
+    display: flex;
+   align-items: center;
+   justify-content: end;
+   padding-right: 28px;
+   gap: 12px;
+   font-size: 17px;
+  
+}
+ .espacoLink a{
+    text-decoration: none;
+    color: #130f0f;
+ }
+
+ .espacoLink a:hover{
+    text-decoration: underline;
+ }
+   .paraLink{
+    font-size: 15px;
+    font-family: monospace;
+   padding-top: 12px;
+   padding-right: 18px;
+   color: #ffff;
+   }
