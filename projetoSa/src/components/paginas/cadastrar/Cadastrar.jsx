@@ -1,11 +1,33 @@
 import { useState } from "react";
 import Header from "../../layout/header/Header";
 import "./Cadastrar.css";
+import { useNavigate } from "react-router-dom";
 function Cadastrar() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [usuario, setUsuario] = useState([]);
+
+  const navigate = useNavigate();
+  function AddUsuario(){
+    let username = {
+      nome: nome,
+      email: email,
+      senha: senha,
+    };
+    if (nome == "") {
+      alert("Os campos de nome  esta vazia");
+    } else if (email == "") {
+      alert("Ocampo de email esta vazia!!");
+    } else if (senha.length < 6) {
+      alert("O tamanho de senha esta menor que 6 caractere!!!");
+    }
+    setUsuario([username, ...usuario]);
+
+    console.log(username);
+    navigate("/produto")
+  }
+  
 
   return (
     <div className="containerCadastro">
@@ -46,8 +68,8 @@ function Cadastrar() {
             />
           </div>
 
-          <button>Cadastrar</button>
-          {/* disabled={email == "" || senha.length < 6} */}
+          <button onClick={AddUsuario}   disabled={email == "" || senha == "" || email == ""} >Cadastrar</button>
+        
           <p>Ja tem conta?</p>
           <button>Fazer Login</button>
         </div>
