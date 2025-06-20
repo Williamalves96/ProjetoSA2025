@@ -1,23 +1,16 @@
-import {  createContext, useState } from "react";
 
- const GlobalContext = createContext();
+import { createContext, useState } from "react";
+
+export  const GlobalContext = createContext()
 export const GlobalContextProvider = ({ Children }) => {
-  const [nome, setNome] = useState
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [nome, setNome] = useState("");
+  
 
   return (
     <GlobalContext.Provider
-      value={{
-        nome,
-        setNome,
-        email,
-        setEmail,
-        senha,
-        setSenha
-
-      }}>
-        {Children}
+      value={{ nome, setNome  }}
+    >
+      {Children}
     </GlobalContext.Provider>
   );
 };

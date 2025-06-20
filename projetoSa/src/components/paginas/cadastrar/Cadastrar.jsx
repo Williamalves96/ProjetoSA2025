@@ -1,12 +1,15 @@
-import { useState } from "react";
+import {useContext, useState } from "react";
 import Header from "../../layout/header/Header";
 import "./Cadastrar.css";
 import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../contexts/GlobalContext";
 function Cadastrar() {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
-  const [usuario, setUsuario] = useState([]);
+  // const [nome, setNome] = useState("");
+   const [email, setEmail] = useState("");
+   const [senha, setSenha] = useState("");
+   const [usuario, setUsuario] = useState([]);
+
+  const {nome, setNome,} = useContext(GlobalContext)
 
   const navigate = useNavigate();
   function AddUsuario(){

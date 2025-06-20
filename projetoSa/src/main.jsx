@@ -1,13 +1,13 @@
-import { StrictMode } from "react";
+
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Home from "./components/paginas/home/Home";
-import MainRouter from "./components/router/MainRoute";
-
+import MainRoute from './components/router/MainRoute'
+import { GlobalContextProvider } from "./components/contexts/GlobalContext";
+import { RouterProvider } from "react-router-dom";
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <MainRouter>
-      <Home />
-    </MainRouter>
-  </StrictMode>
+  <GlobalContextProvider>
+    <RouterProvider router={MainRoute}>
+
+    </RouterProvider>
+  </GlobalContextProvider>
 );
