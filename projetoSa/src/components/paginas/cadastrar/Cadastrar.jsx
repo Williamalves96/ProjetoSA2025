@@ -1,18 +1,19 @@
-import {useContext, useState } from "react";
+import { useContext, useState } from "react";
+import { GlobalContext } from "../../contexts/GlobalContext";
 import Header from "../../layout/header/Header";
 import "./Cadastrar.css";
 import { useNavigate } from "react-router-dom";
-import { GlobalContext } from "../../contexts/GlobalContext";
-function Cadastrar() {
-  // const [nome, setNome] = useState("");
-   const [email, setEmail] = useState("");
-   const [senha, setSenha] = useState("");
-   const [usuario, setUsuario] = useState([]);
 
-  const {nome, setNome,} = useContext(GlobalContext)
+function Cadastrar() {
+  //  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [usuario, setUsuario] = useState([]);
+
+  const { nome, setNome } = useContext(GlobalContext);
 
   const navigate = useNavigate();
-  function AddUsuario(){
+  function AddUsuario() {
     let username = {
       nome: nome,
       email: email,
@@ -26,11 +27,11 @@ function Cadastrar() {
       alert("O tamanho de senha esta menor que 6 caractere!!!");
     }
     setUsuario([username, ...usuario]);
-
+    alert(`Seja bem vinda ${nome}`);
     console.log(username);
-    navigate("/produto")
+    navigate("/agendar");
+    // {`Ola ${nome}`}
   }
-  
 
   return (
     <div className="containerCadastro">
@@ -71,8 +72,13 @@ function Cadastrar() {
             />
           </div>
 
-          <button onClick={AddUsuario}   disabled={email == "" || senha == "" || email == ""} >Cadastrar</button>
-        
+          <button
+            onClick={AddUsuario}
+            disabled={email == "" || senha == "" || email == ""}
+          >
+            Cadastrar
+          </button>
+
           <p>Ja tem conta?</p>
           <button>Fazer Login</button>
         </div>

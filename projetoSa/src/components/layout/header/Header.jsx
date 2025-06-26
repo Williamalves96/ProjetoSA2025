@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="containerHeader">
       <div className="logo">
-        <img src="lixo.webp" className="logo" />
+        <img src="eco2.jpg"className="logo" />
         <h1 className="title">Eco-Descart</h1>
       </div>
       <div className="espacoLink">

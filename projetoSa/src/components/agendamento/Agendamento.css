@@ -1,0 +1,30 @@
+.containre{
+    height: 100%;
+    background-color: rgb(70, 70, 189);
+    display: flex;
+    flex-direction: column;
+     
+}
+.containerIdentidade{
+     /* height:420px ;  */
+    width: 300px;
+    /* width: 100vw; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     background-color: rgb(47, 66, 47); 
+}
+.espacoHeader{
+    height: 60px;
+    width: 100%;
+}
+.containerform{
+    min-height: calc(100vh - 60px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}

@@ -4,6 +4,7 @@ import Header from "../../layout/header/Header";
 
 function Home() {
   return (
+    
     <div className="containerHome">
       <Header />
       <Body />

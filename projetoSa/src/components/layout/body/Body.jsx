@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Body.css";
 import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 function Body() {
   const [cep, setCep] = useState("");
-  const [endereco, setEndereco] = useState({});
-  const [produto, setProduto] = useState("");
+  //  const [endereco, setEndereco] = useState({});
+const {endereco, setEndereco} = useContext(GlobalContext)
 
   useEffect(() => {
     if (cep.length === 8) {
@@ -15,23 +16,37 @@ function Body() {
         })
         .then((data) => {
           setEndereco(data);
-          console.log(data);
+          //console.log(data);
         });
     }
     console.log(cep);
   }, [cep]);
   useEffect(() => {
-    console.log(endereco);
+     console.log(endereco);
   }, [endereco]);
 
   const navigate = useNavigate();
   function AddProduto() {
+   if(endereco.localidade == "Florianopolis"){
+    alert("parabeen")
+   }else{
+    alert("Localidade nõo encontrado")
+   }
     navigate("/produto");
-    
+   
   }
 
- function AddSobre(){
+  function AddSobre() {
     navigate("/sobre");
+  }
+
+  function AddAgendamento() {
+    let quest = prompt("Tem cadastro??");
+    if (quest == "Não") {
+      navigate("/cadastrar");
+    } else {
+      navigate("/agendar");
+    }
   }
   return (
     <div className="containerBody">
@@ -47,31 +62,34 @@ function Body() {
       </div>
 
       <div className="descart">
-        <div className="paragraf">
+        <div className="tituleDescarte">
           <h1>QUER DESCARTAR?</h1>
-          <p className="paragrafDescart">
-            Digite seu CEP, escoha o produto e encontra os pontos de recebemento
-            para o descarte correto.
-          </p>
         </div>
 
-        <div className="inputDesacrt">
-          <input
-            type="text"
-            placeholder=" Digite o CEP"
-            value={cep}
-            onChange={(e) => setCep(e.target.value)}
-          />
+        <div className="containerParaInput">
+          <div className="paragraf">
+            <p className="paragrafDescart">
+              Digite seu CEP, escoha o produto e encontra os pontos de
+              recebemento para o descarte correto.
+            </p>
+          </div>
 
-          <input
-            type="text"
-            placeholder="Produto"
-            value={produto}
-            onChange={(e) => setProduto(e.target.value)}
-          />
-          <button className="butPonto" onClick={AddProduto}>
-            Encontrar Pontos
-          </button>
+          <div className="inputDesacrt">
+            <input
+              type="text"
+              placeholder=" Digite o CEP"
+              value={cep}
+              onChange={(e) => setCep(e.target.value)}
+            />
+
+            <button className="butPonto" onClick={AddProduto}>
+              Encontrar Pontos
+            </button>
+          </div>
+        </div>
+
+        <div className="espacoSalvo">
+          <button onClick={AddAgendamento}>Quero Agendar</button>
         </div>
       </div>
     </div>

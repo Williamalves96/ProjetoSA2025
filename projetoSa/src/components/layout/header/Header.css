@@ -1,16 +1,18 @@
 .containerHeader{
-    height: 70px;
-    display: flex;
-
-    justify-content: space-between;
+     height: 60px; 
     
-    background-color:rgb(87, 218, 60);
+    display: flex;
+    justify-content: space-between;
+    background-color:#4A692D ;
+   
 }
+
 .logo{
     height: 100%;
     border: 50%;
     display: flex;
     align-items: center;
+    
 }
 
 .title{
@@ -31,7 +33,7 @@
 }
  .espacoLink a{
     text-decoration: none;
-    color: #130f0f;
+    color: #e9e7e7;
  }
 
  .espacoLink a:hover{
