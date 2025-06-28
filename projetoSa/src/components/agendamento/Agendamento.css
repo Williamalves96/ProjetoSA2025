@@ -21,10 +21,21 @@
     width: 100%;
 }
 .containerform{
-    min-height: calc(100vh - 60px); 
+    min-height: calc(100vh - 60px - 40px); 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* background-color: black; */
+}
+
+
+.useName{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 18px; */
+    /* background-color: black; */
+    color: black;
 }

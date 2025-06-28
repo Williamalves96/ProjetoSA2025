@@ -29,10 +29,13 @@ function Cadastrar() {
     setUsuario([username, ...usuario]);
     alert(`Seja bem vinda ${nome}`);
     console.log(username);
-    navigate("/agendar");
+    navigate("/");
     // {`Ola ${nome}`}
   }
 
+  function AddLogin(){
+    navigate('/login')
+  }
   return (
     <div className="containerCadastro">
       <div className="espacoHeader">
@@ -78,9 +81,7 @@ function Cadastrar() {
           >
             Cadastrar
           </button>
-
-          <p>Ja tem conta?</p>
-          <button>Fazer Login</button>
+          <button onClick={AddLogin}>Fazer Login</button>
         </div>
       </div>
     </div>

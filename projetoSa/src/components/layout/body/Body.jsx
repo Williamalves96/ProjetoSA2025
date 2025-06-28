@@ -42,7 +42,7 @@ const {endereco, setEndereco} = useContext(GlobalContext)
 
   function AddAgendamento() {
     let quest = prompt("Tem cadastro??");
-    if (quest == "Não") {
+    if (quest == "Não" ) {
       navigate("/cadastrar");
     } else {
       navigate("/agendar");
@@ -53,7 +53,7 @@ const {endereco, setEndereco} = useContext(GlobalContext)
       <div className="intro">
         <div className="espacoVazia">
           <strong>
-            <p>Conheça a plataforma de descart de lixo electronico</p>
+            <p>Conheça a plataforma de descarte de lixo electronico</p>
           </strong>
           <button onClick={AddSobre}>Clique e saiba Mais</button>
         </div>
