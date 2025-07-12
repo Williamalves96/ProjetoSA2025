@@ -6,7 +6,6 @@ function Agendamento() {
   const [nomeiten, setNomeIten] = useState("");
   const [tamanho, setTamanho] = useState("");
   const [dia, setDia] = useState("");
-  const [hora, setHora] = useState("");
   const [itens, setItens] = useState([]);
 
   const { nome } = useContext(GlobalContext);
@@ -16,7 +15,7 @@ function Agendamento() {
       Nome: nomeiten,
       Tamanho: tamanho,
       Dia: dia,
-      hora: hora,
+     
     };
     setItens([itenDescarte, ...itens]);
     console.log(itenDescarte);
@@ -29,7 +28,7 @@ function Agendamento() {
       </div>
       <div className="useName">
         <h1>
-          <strong>{`Bom de te ver, ${nome}`}</strong>
+          <strong>{` ${nome}`}</strong>
         </h1>
       </div>
       <div className="containerform">
@@ -61,14 +60,14 @@ function Agendamento() {
                 onChange={(e) => setDia(e.target.value)}
               />
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="">Hora de descarte</label>
               <input
                 type="hora"
                 value={hora}
                 onChange={(e) => setHora(e.target.value)}
               />
-            </div>
+            </div> */}
           </div>
           <div>
             <button onClick={Addagendamento}>Agendar</button>

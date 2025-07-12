@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import Header from "../../layout/header/Header";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [nome, setNome] = useState("");
   const [senha, setSenha] = useState("");
   const [usuario, setUsuario] = useState(null);
+  const navigate = useNavigate()
+
 
   useEffect(() => {
     const usuarioAmazenamento = localStorage.getItem("usuario");
@@ -22,6 +25,7 @@ function Login() {
     const usuario = { nome, senha };
     localStorage.setItem("usuario", JSON.stringify(usuario));
     setUsuario(usuario);
+ navigate('/agendar')
   }
 
   return (

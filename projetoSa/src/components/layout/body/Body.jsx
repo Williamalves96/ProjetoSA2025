@@ -27,12 +27,13 @@ const {endereco, setEndereco} = useContext(GlobalContext)
 
   const navigate = useNavigate();
   function AddProduto() {
-   if(endereco.localidade == "Florianopolis"){
+  /*  if(endereco.localidade == "Florianopolis"){
     alert("parabeen")
    }else{
     alert("Localidade nõo encontrado")
-   }
-    navigate("/produto");
+   }*/
+  alert('Pagina em manutenção!!! ')
+    // navigate("/produto");
    
   }
 
@@ -41,12 +42,9 @@ const {endereco, setEndereco} = useContext(GlobalContext)
   }
 
   function AddAgendamento() {
-    let quest = prompt("Tem cadastro??");
-    if (quest == "Não" ) {
-      navigate("/cadastrar");
-    } else {
-      navigate("/agendar");
-    }
+    navigate('/cadastrar')
+      // navigate("/login");
+    
   }
   return (
     <div className="containerBody">
